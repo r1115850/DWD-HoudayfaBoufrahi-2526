@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Sound Button Panel</title>
+   <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+   <header>
+      <h1>Sound Button Panel</h1>
+      <p>Zoek geluiden en voeg ze toe aan je dashboard.</p>
+   </header>
+
+   <main>
+      <section class="search-section">
+         <h2>Zoeken</h2>
+
+         <form id="search-form">
+            <input type="text" id="search-input" placeholder="Zoek bv. explosion, cow, applause">
+            <button type="submit">Zoeken</button>
+         </form>
+
+         <p id="message"></p>
+
+         <div id="results" class="card-container"></div>
+      </section>
+
+      <section class="dashboard-section">
+         <h2>Mijn dashboard</h2>
+         <div id="dashboard" class="card-container"></div>
+      </section>
+   </main>
+
+   <script src="main.js"></script>
+</body>
+
+</html>
