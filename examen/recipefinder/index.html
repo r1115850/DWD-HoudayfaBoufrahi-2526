@@ -1,0 +1,61 @@
+﻿<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipefinder</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <p class="eyebrow">TheMealDB zoektool</p>
+      <h1>Recipefinder</h1>
+      <p class="intro">Zoek recepten, bekijk ingredienten en bewaar je favorieten voor later.</p>
+    </div>
+    <a class="api-link" href="https://www.themealdb.com/api.php" target="_blank" rel="noopener">API</a>
+  </header>
+
+  <main class="layout">
+    <section class="search-panel" aria-labelledby="search-title">
+      <div class="panel-heading">
+        <div>
+          <h2 id="search-title">Recepten zoeken</h2>
+          <p>Maximaal 20 resultaten per zoekopdracht.</p>
+        </div>
+      </div>
+
+      <form class="search-form" id="search-form" novalidate>
+        <label for="search-input">Trefwoord</label>
+        <div class="search-row">
+          <input id="search-input" name="search" type="search" placeholder="bv. chicken, pasta, beef" autocomplete="off">
+          <button type="submit">Zoeken</button>
+        </div>
+      </form>
+
+      <p class="feedback" id="feedback" role="status" aria-live="polite">Vul een trefwoord in om recepten te zoeken.</p>
+      <div class="recipes-grid" id="results" aria-label="Zoekresultaten"></div>
+    </section>
+
+    <aside class="favorites-panel" aria-labelledby="favorites-title">
+      <div class="panel-heading">
+        <div>
+          <h2 id="favorites-title">Favorieten</h2>
+          <p id="favorites-count">0 bewaarde recepten</p>
+        </div>
+        <button class="ghost-button" id="clear-favorites" type="button">Leegmaken</button>
+      </div>
+      <div class="favorites-list" id="favorites-list"></div>
+    </aside>
+  </main>
+
+  <section class="detail-panel hidden" id="detail-panel" aria-labelledby="detail-title">
+    <div class="detail-backdrop" id="detail-backdrop"></div>
+    <article class="detail-card" role="dialog" aria-modal="true" aria-labelledby="detail-title">
+      <button class="close-button" id="close-detail" type="button" aria-label="Sluit detailweergave">x</button>
+      <div id="detail-content"></div>
+    </article>
+  </section>
+</body>
+</html>
